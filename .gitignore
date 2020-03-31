@@ -3,3 +3,4 @@ src/generated/
 *.env*
 *.bak
 migrations/
+.DS_Store
