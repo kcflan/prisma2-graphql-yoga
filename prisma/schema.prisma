@@ -1,0 +1,209 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Accesses {
+  abbr        String?
+  id          Int      @default(autoincrement()) @unique
+  name        String?
+  test_access Boolean?
+}
+
+model Accounts {
+  acct_num          String?
+  contact_secondary Int?
+  id                Int        @default(autoincrement()) @unique
+  organization_name String?
+  status            String?
+  test_acct         Boolean?
+  type              String?
+  account_owner_id  Users?     @relation("Accounts_account_owner_idToUsers", references: [id])
+  contact_primary   Contacts?  @relation("Accounts_contact_primaryToContacts", references: [id])  
+  from_lead_id      Leads?     @relation(references: [id])
+  lead_creator_id   Users?     @relation("Accounts_lead_creator_idToUsers", references: [id])
+  location          Locations? @relation(references: [id])
+
+  @@index([account_owner_id], name: "account_owner_id")
+  @@index([contact_primary], name: "contact_primary")
+  @@index([from_lead_id], name: "from_lead_id")
+  @@index([lead_creator_id], name: "lead_creator_id")
+  @@index([location], name: "location")
+}
+
+model Companies {
+  active         Boolean?
+  company_child  String?
+  company_parent String?
+  id             Int      @default(autoincrement()) @unique
+  name           String?
+  test_company   Boolean?
+  Users          Users[]
+}
+
+model Contacts {
+  email_one                                   String?
+  email_two                                   String?
+  first_name                                  String?
+  id                                          Int        @default(autoincrement()) @unique
+  last_name                                   String?
+  other_locations_ids                         String?
+  phone_cell                                  String?
+  phone_home                                  String?
+  primary_location_id                         Int?
+  suffix                                      String?
+  test_contact                                Boolean?
+  Accounts_Accounts_contact_primaryToContacts Accounts[] @relation("Accounts_contact_primaryToContacts")
+}
+
+model Leads {
+  address_one      String?
+  address_two      String?
+  city             String?
+  email            String?
+  first_name       String?
+  gate_code        String?
+  id               Int             @default(autoincrement()) @unique
+  last_name        String?
+  // This type is currently not supported.
+  // latitude      geometric?
+  lead_source_id   Int?
+  // This type is currently not supported.
+  // longitude     geometric?
+  phone_cell       String?
+  phone_home       String?
+  stage            String?
+  state_abbr       String?
+  test_lead        Int?
+  zip              String?
+  lead_campaign_id LeadsCampaigns? @relation(references: [id])
+  lead_creator_id  Users?          @relation(references: [id])
+  Accounts         Accounts[]
+
+  @@index([lead_campaign_id], name: "lead_campaign_id")
+  @@index([lead_creator_id], name: "lead_creator_id")
+}
+
+model LeadsCampaigns {
+  active             Boolean?
+  company_id         Int?
+  id                 Int           @default(autoincrement()) @unique
+  lead_direction     Int?
+  name               String?
+  test_lead_campaign Boolean?
+  lead_source_id     LeadsSources? @relation(references: [id])
+  Leads              Leads[]
+
+  @@index([lead_source_id], name: "lead_source_id")
+}
+
+model LeadsSources {
+  active           Boolean?
+  id               Int              @default(autoincrement()) @unique
+  name             String?
+  test_lead_source Boolean?
+  type             String?
+  LeadsCampaigns   LeadsCampaigns[]
+}
+
+model Locations {
+  acct_num_id   Int?
+  address_one   String?
+  address_two   String?
+  city          String?
+  gate_code     String?
+  id            Int        @default(autoincrement()) @unique
+  // This type is currently not supported.
+  // latitude   geometric?
+  // This type is currently not supported.
+  // longitude  geometric?
+  state_abbr    String?
+  test_location Boolean?
+  zip           String?
+  Accounts      Accounts[]
+}
+
+model Offices {
+  address_one   String?
+  address_two   String?
+  city          String?
+  has_warehouse Boolean?
+  id            Int          @default(autoincrement()) @unique
+  // This type is currently not supported.
+  // latitude   geometric?
+  // This type is currently not supported.
+  // longitude  geometric?
+  name          String?
+  state_abbr    String?
+  test_office   Boolean?
+  zip           String?
+  SalesTeams    SalesTeams[]
+}
+
+model Roles {
+  default_access String?
+  id             Int      @default(autoincrement()) @unique
+  name           String?
+  test_role      Boolean?
+  Users          Users[]
+}
+
+model SalesTeams {
+  active          Boolean?
+  name            String?
+  team_child      Int?
+  team_id         Int      @default(autoincrement()) @unique
+  team_lead_two   Int?
+  team_parent     Int?
+  test_sales_team Boolean?
+  type            String?
+  office_id       Offices? @relation(references: [id])
+  team_lead_one   Users?   @relation("SalesTeams_team_lead_oneToUsers", references: [id])
+  Users           Users[]  @relation("SalesTeamsToUsers_team_id")
+
+  @@index([office_id], name: "office_id")
+  @@index([team_lead_one], name: "team_lead_one")
+}
+
+model Users {
+  access                                    String?
+  address_one                               String?
+  address_two                               String?
+  area_id                                   Int?
+  city                                      String?
+  created_by                                Int?
+  email_nerd                                String?
+  email_personal                            String?
+  employment_status                         Boolean?
+  entity_type                               String?
+  first_name                                String?
+  id                                        Int          @default(autoincrement()) @unique
+  last_name                                 String?
+  payroll_id                                Int?
+  phone_cell                                String?
+  phone_cell_carrier                        String?
+  phone_home                                String?
+  referred_by                               Int?
+  security_pin                              Int?
+  state_abbr                                String?
+  suffix                                    String?
+  team_position_id                          Int?
+  test_user                                 Boolean?
+  third_party_ids                           String?
+  zip                                       String?
+  company_id                                Companies?   @relation(references: [id])
+  role_id                                   Roles?       @relation(references: [id])
+  team_id                                   SalesTeams?  @relation("SalesTeamsToUsers_team_id", references: [team_id])
+  Accounts_Accounts_account_owner_idToUsers Accounts[]   @relation("Accounts_account_owner_idToUsers")
+  Accounts_Accounts_lead_creator_idToUsers  Accounts[]   @relation("Accounts_lead_creator_idToUsers")
+  Leads                                     Leads[]
+  SalesTeams                                SalesTeams[] @relation("SalesTeams_team_lead_oneToUsers")
+
+  @@index([company_id], name: "company_id")
+  @@index([role_id], name: "role_id")
+  @@index([team_id], name: "team_id")
+}

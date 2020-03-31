@@ -1,0 +1,30 @@
+{
+  "name": "node-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "2.0.0-preview025",
+    "graphql": "^14.5.8",
+    "graphql-yoga": "^1.16.1",
+    "nexus": "0.12.0",
+    "nexus-prisma": "^0.11.1",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "start": "node src",
+    "dev": "nodemon -e js,graphql -x node src"
+  },
+  "devDependencies": {
+    "@prisma/cli": "2.0.0-preview025"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "all"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}
