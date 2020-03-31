@@ -1,7 +1,6 @@
 const { GraphQLServer } = require('graphql-yoga')
 // const { makeSchema } = require('nexus')
-// const { PrismaClient } = require('@prisma/client')
-const { nexusPrismaPlugin } = require('nexus-prisma')
+// const { nexusPrismaPlugin } = require('nexus-prisma')
 
 const prisma = require('./db')
 // const { Query, Mutation } = require('./types')
@@ -11,7 +10,7 @@ const resolvers = require('./resolvers')
 
 new GraphQLServer({
   // schema: makeSchema({
-  typeDefs: __dirname + '/graphql/schema.graphql',
+  typeDefs: __dirname + '/graphql/prisma1_schema.graphql',
   // types: [Query, Mutation],
   resolvers,
   // stops some error
@@ -24,6 +23,7 @@ new GraphQLServer({
   //   typegen: __dirname + '/generated/nexus.ts',
   // },
   // }),
+
   context: { prisma },
 }).start(() =>
   console.log(

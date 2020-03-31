@@ -2,7 +2,7 @@ type Access {
   id: Int!
   abbr: String
   name: String
-  testAccess: Boolean
+  test_access: Boolean
 }
 
 type AccessConnection {
@@ -15,7 +15,7 @@ input AccessCreateInput {
   id: Int
   abbr: String
   name: String
-  testAccess: Boolean
+  test_access: Boolean
 }
 
 type AccessEdge {
@@ -38,7 +38,7 @@ type AccessPreviousValues {
   id: Int!
   abbr: String
   name: String
-  testAccess: Boolean
+  test_access: Boolean
 }
 
 type AccessSubscriptionPayload {
@@ -62,13 +62,13 @@ input AccessSubscriptionWhereInput {
 input AccessUpdateInput {
   abbr: String
   name: String
-  testAccess: Boolean
+  test_access: Boolean
 }
 
 input AccessUpdateManyMutationInput {
   abbr: String
   name: String
-  testAccess: Boolean
+  test_access: Boolean
 }
 
 input AccessWhereInput {
@@ -108,7 +108,7 @@ input AccessWhereInput {
   name_not_starts_with: String
   name_ends_with: String
   name_not_ends_with: String
-  testAccess: Boolean
+  test_access: Boolean
   testAccess_not: Boolean
   AND: [AccessWhereInput!]
   OR: [AccessWhereInput!]
@@ -121,16 +121,16 @@ input AccessWhereUniqueInput {
 
 type Account {
   id: Int!
-  accountOwner: User
-  acctNum: String
-  contactPrimary: Contact
-  contactSecondary: Int
-  fromLead: Lead
-  leadCreator: User
+  account_owner: User
+  acct_num: String
+  contact_primary: Contact
+  contact_secondary: Int
+  from_lead: Lead
+  lead_creator: User
   location: Location
-  organizationName: String
+  organization_name: String
   status: String
-  testAcct: Boolean
+  test_acct: Boolean
   type: String
 }
 
@@ -142,16 +142,16 @@ type AccountConnection {
 
 input AccountCreateInput {
   id: Int
-  accountOwner: UserCreateOneInput
-  acctNum: String
-  contactPrimary: ContactCreateOneInput
-  contactSecondary: Int
-  fromLead: LeadCreateOneWithoutAccountsInput
-  leadCreator: UserCreateOneInput
+  account_owner: UserCreateOneInput
+  acct_num: String
+  contact_primary: ContactCreateOneInput
+  contact_secondary: Int
+  from_lead: LeadCreateOneWithoutAccountsInput
+  lead_creator: UserCreateOneInput
   location: LocationCreateOneWithoutAccountsInput
-  organizationName: String
+  organization_name: String
   status: String
-  testAcct: Boolean
+  test_acct: Boolean
   type: String
 }
 
@@ -167,29 +167,29 @@ input AccountCreateManyWithoutLocationInput {
 
 input AccountCreateWithoutFromLeadInput {
   id: Int
-  accountOwner: UserCreateOneInput
-  acctNum: String
-  contactPrimary: ContactCreateOneInput
-  contactSecondary: Int
-  leadCreator: UserCreateOneInput
+  account_owner: UserCreateOneInput
+  acct_num: String
+  contact_primary: ContactCreateOneInput
+  contact_secondary: Int
+  lead_creator: UserCreateOneInput
   location: LocationCreateOneWithoutAccountsInput
-  organizationName: String
+  organization_name: String
   status: String
-  testAcct: Boolean
+  test_acct: Boolean
   type: String
 }
 
 input AccountCreateWithoutLocationInput {
   id: Int
-  accountOwner: UserCreateOneInput
-  acctNum: String
-  contactPrimary: ContactCreateOneInput
-  contactSecondary: Int
-  fromLead: LeadCreateOneWithoutAccountsInput
-  leadCreator: UserCreateOneInput
-  organizationName: String
+  account_owner: UserCreateOneInput
+  acct_num: String
+  contact_primary: ContactCreateOneInput
+  contact_secondary: Int
+  from_lead: LeadCreateOneWithoutAccountsInput
+  lead_creator: UserCreateOneInput
+  organization_name: String
   status: String
-  testAcct: Boolean
+  test_acct: Boolean
   type: String
 }
 
@@ -217,11 +217,11 @@ enum AccountOrderByInput {
 
 type AccountPreviousValues {
   id: Int!
-  acctNum: String
-  contactSecondary: Int
-  organizationName: String
+  acct_num: String
+  contact_secondary: Int
+  organization_name: String
   status: String
-  testAcct: Boolean
+  test_acct: Boolean
   type: String
 }
 
@@ -234,7 +234,7 @@ input AccountScalarWhereInput {
   id_lte: Int
   id_gt: Int
   id_gte: Int
-  acctNum: String
+  acct_num: String
   acctNum_not: String
   acctNum_in: [String!]
   acctNum_not_in: [String!]
@@ -248,7 +248,7 @@ input AccountScalarWhereInput {
   acctNum_not_starts_with: String
   acctNum_ends_with: String
   acctNum_not_ends_with: String
-  contactSecondary: Int
+  contact_secondary: Int
   contactSecondary_not: Int
   contactSecondary_in: [Int!]
   contactSecondary_not_in: [Int!]
@@ -256,7 +256,7 @@ input AccountScalarWhereInput {
   contactSecondary_lte: Int
   contactSecondary_gt: Int
   contactSecondary_gte: Int
-  organizationName: String
+  organization_name: String
   organizationName_not: String
   organizationName_in: [String!]
   organizationName_not_in: [String!]
@@ -284,7 +284,7 @@ input AccountScalarWhereInput {
   status_not_starts_with: String
   status_ends_with: String
   status_not_ends_with: String
-  testAcct: Boolean
+  test_acct: Boolean
   testAcct_not: Boolean
   type: String
   type_not: String
@@ -324,34 +324,34 @@ input AccountSubscriptionWhereInput {
 }
 
 input AccountUpdateInput {
-  accountOwner: UserUpdateOneInput
-  acctNum: String
-  contactPrimary: ContactUpdateOneInput
-  contactSecondary: Int
-  fromLead: LeadUpdateOneWithoutAccountsInput
-  leadCreator: UserUpdateOneInput
+  account_owner: UserUpdateOneInput
+  acct_num: String
+  contact_primary: ContactUpdateOneInput
+  contact_secondary: Int
+  from_lead: LeadUpdateOneWithoutAccountsInput
+  lead_creator: UserUpdateOneInput
   location: LocationUpdateOneWithoutAccountsInput
-  organizationName: String
+  organization_name: String
   status: String
-  testAcct: Boolean
+  test_acct: Boolean
   type: String
 }
 
 input AccountUpdateManyDataInput {
-  acctNum: String
-  contactSecondary: Int
-  organizationName: String
+  acct_num: String
+  contact_secondary: Int
+  organization_name: String
   status: String
-  testAcct: Boolean
+  test_acct: Boolean
   type: String
 }
 
 input AccountUpdateManyMutationInput {
-  acctNum: String
-  contactSecondary: Int
-  organizationName: String
+  acct_num: String
+  contact_secondary: Int
+  organization_name: String
   status: String
-  testAcct: Boolean
+  test_acct: Boolean
   type: String
 }
 
@@ -385,28 +385,28 @@ input AccountUpdateManyWithWhereNestedInput {
 }
 
 input AccountUpdateWithoutFromLeadDataInput {
-  accountOwner: UserUpdateOneInput
-  acctNum: String
-  contactPrimary: ContactUpdateOneInput
-  contactSecondary: Int
-  leadCreator: UserUpdateOneInput
+  account_owner: UserUpdateOneInput
+  acct_num: String
+  contact_primary: ContactUpdateOneInput
+  contact_secondary: Int
+  lead_creator: UserUpdateOneInput
   location: LocationUpdateOneWithoutAccountsInput
-  organizationName: String
+  organization_name: String
   status: String
-  testAcct: Boolean
+  test_acct: Boolean
   type: String
 }
 
 input AccountUpdateWithoutLocationDataInput {
-  accountOwner: UserUpdateOneInput
-  acctNum: String
-  contactPrimary: ContactUpdateOneInput
-  contactSecondary: Int
-  fromLead: LeadUpdateOneWithoutAccountsInput
-  leadCreator: UserUpdateOneInput
-  organizationName: String
+  account_owner: UserUpdateOneInput
+  acct_num: String
+  contact_primary: ContactUpdateOneInput
+  contact_secondary: Int
+  from_lead: LeadUpdateOneWithoutAccountsInput
+  lead_creator: UserUpdateOneInput
+  organization_name: String
   status: String
-  testAcct: Boolean
+  test_acct: Boolean
   type: String
 }
 
@@ -441,8 +441,8 @@ input AccountWhereInput {
   id_lte: Int
   id_gt: Int
   id_gte: Int
-  accountOwner: UserWhereInput
-  acctNum: String
+  account_owner: UserWhereInput
+  acct_num: String
   acctNum_not: String
   acctNum_in: [String!]
   acctNum_not_in: [String!]
@@ -456,8 +456,8 @@ input AccountWhereInput {
   acctNum_not_starts_with: String
   acctNum_ends_with: String
   acctNum_not_ends_with: String
-  contactPrimary: ContactWhereInput
-  contactSecondary: Int
+  contact_primary: ContactWhereInput
+  contact_secondary: Int
   contactSecondary_not: Int
   contactSecondary_in: [Int!]
   contactSecondary_not_in: [Int!]
@@ -465,10 +465,10 @@ input AccountWhereInput {
   contactSecondary_lte: Int
   contactSecondary_gt: Int
   contactSecondary_gte: Int
-  fromLead: LeadWhereInput
-  leadCreator: UserWhereInput
+  from_lead: LeadWhereInput
+  lead_creator: UserWhereInput
   location: LocationWhereInput
-  organizationName: String
+  organization_name: String
   organizationName_not: String
   organizationName_in: [String!]
   organizationName_not_in: [String!]
@@ -496,7 +496,7 @@ input AccountWhereInput {
   status_not_starts_with: String
   status_ends_with: String
   status_not_ends_with: String
-  testAcct: Boolean
+  test_acct: Boolean
   testAcct_not: Boolean
   type: String
   type_not: String
@@ -576,10 +576,10 @@ type BatchPayload {
 type Company {
   id: Int!
   active: Boolean
-  companyChild: String
-  companyParent: String
+  company_child: String
+  company_parent: String
   name: String
-  testCompany: Boolean
+  test_company: Boolean
   users(
     where: UserWhereInput
     orderBy: UserOrderByInput
@@ -600,10 +600,10 @@ type CompanyConnection {
 input CompanyCreateInput {
   id: Int
   active: Boolean
-  companyChild: String
-  companyParent: String
+  company_child: String
+  company_parent: String
   name: String
-  testCompany: Boolean
+  test_company: Boolean
   users: UserCreateManyWithoutCompanyInput
 }
 
@@ -615,10 +615,10 @@ input CompanyCreateOneWithoutUsersInput {
 input CompanyCreateWithoutUsersInput {
   id: Int
   active: Boolean
-  companyChild: String
-  companyParent: String
+  company_child: String
+  company_parent: String
   name: String
-  testCompany: Boolean
+  test_company: Boolean
 }
 
 type CompanyEdge {
@@ -644,10 +644,10 @@ enum CompanyOrderByInput {
 type CompanyPreviousValues {
   id: Int!
   active: Boolean
-  companyChild: String
-  companyParent: String
+  company_child: String
+  company_parent: String
   name: String
-  testCompany: Boolean
+  test_company: Boolean
 }
 
 type CompanySubscriptionPayload {
@@ -670,19 +670,19 @@ input CompanySubscriptionWhereInput {
 
 input CompanyUpdateInput {
   active: Boolean
-  companyChild: String
-  companyParent: String
+  company_child: String
+  company_parent: String
   name: String
-  testCompany: Boolean
+  test_company: Boolean
   users: UserUpdateManyWithoutCompanyInput
 }
 
 input CompanyUpdateManyMutationInput {
   active: Boolean
-  companyChild: String
-  companyParent: String
+  company_child: String
+  company_parent: String
   name: String
-  testCompany: Boolean
+  test_company: Boolean
 }
 
 input CompanyUpdateOneWithoutUsersInput {
@@ -696,10 +696,10 @@ input CompanyUpdateOneWithoutUsersInput {
 
 input CompanyUpdateWithoutUsersDataInput {
   active: Boolean
-  companyChild: String
-  companyParent: String
+  company_child: String
+  company_parent: String
   name: String
-  testCompany: Boolean
+  test_company: Boolean
 }
 
 input CompanyUpsertWithoutUsersInput {
@@ -718,7 +718,7 @@ input CompanyWhereInput {
   id_gte: Int
   active: Boolean
   active_not: Boolean
-  companyChild: String
+  company_child: String
   companyChild_not: String
   companyChild_in: [String!]
   companyChild_not_in: [String!]
@@ -732,7 +732,7 @@ input CompanyWhereInput {
   companyChild_not_starts_with: String
   companyChild_ends_with: String
   companyChild_not_ends_with: String
-  companyParent: String
+  company_parent: String
   companyParent_not: String
   companyParent_in: [String!]
   companyParent_not_in: [String!]
@@ -760,7 +760,7 @@ input CompanyWhereInput {
   name_not_starts_with: String
   name_ends_with: String
   name_not_ends_with: String
-  testCompany: Boolean
+  test_company: Boolean
   testCompany_not: Boolean
   users_every: UserWhereInput
   users_some: UserWhereInput
@@ -776,16 +776,16 @@ input CompanyWhereUniqueInput {
 
 type Contact {
   id: Int!
-  emailOne: String
-  emailTwo: String
-  firstName: String
-  lastName: String
-  otherLocationsIds: String
-  phoneCell: String
-  phoneHome: String
-  primaryLocationId: Int
+  email_one: String
+  email_two: String
+  first_name: String
+  last_name: String
+  other_locations_ids: String
+  phone_cell: String
+  phone_home: String
+  primary_location_id: Int
   suffix: String
-  testContact: Boolean
+  test_contact: Boolean
 }
 
 type ContactConnection {
@@ -796,16 +796,16 @@ type ContactConnection {
 
 input ContactCreateInput {
   id: Int
-  emailOne: String
-  emailTwo: String
-  firstName: String
-  lastName: String
-  otherLocationsIds: String
-  phoneCell: String
-  phoneHome: String
-  primaryLocationId: Int
+  email_one: String
+  email_two: String
+  first_name: String
+  last_name: String
+  other_locations_ids: String
+  phone_cell: String
+  phone_home: String
+  primary_location_id: Int
   suffix: String
-  testContact: Boolean
+  test_contact: Boolean
 }
 
 input ContactCreateOneInput {
@@ -845,16 +845,16 @@ enum ContactOrderByInput {
 
 type ContactPreviousValues {
   id: Int!
-  emailOne: String
-  emailTwo: String
-  firstName: String
-  lastName: String
-  otherLocationsIds: String
-  phoneCell: String
-  phoneHome: String
-  primaryLocationId: Int
+  email_one: String
+  email_two: String
+  first_name: String
+  last_name: String
+  other_locations_ids: String
+  phone_cell: String
+  phone_home: String
+  primary_location_id: Int
   suffix: String
-  testContact: Boolean
+  test_contact: Boolean
 }
 
 type ContactSubscriptionPayload {
@@ -876,42 +876,42 @@ input ContactSubscriptionWhereInput {
 }
 
 input ContactUpdateDataInput {
-  emailOne: String
-  emailTwo: String
-  firstName: String
-  lastName: String
-  otherLocationsIds: String
-  phoneCell: String
-  phoneHome: String
-  primaryLocationId: Int
+  email_one: String
+  email_two: String
+  first_name: String
+  last_name: String
+  other_locations_ids: String
+  phone_cell: String
+  phone_home: String
+  primary_location_id: Int
   suffix: String
-  testContact: Boolean
+  test_contact: Boolean
 }
 
 input ContactUpdateInput {
-  emailOne: String
-  emailTwo: String
-  firstName: String
-  lastName: String
-  otherLocationsIds: String
-  phoneCell: String
-  phoneHome: String
-  primaryLocationId: Int
+  email_one: String
+  email_two: String
+  first_name: String
+  last_name: String
+  other_locations_ids: String
+  phone_cell: String
+  phone_home: String
+  primary_location_id: Int
   suffix: String
-  testContact: Boolean
+  test_contact: Boolean
 }
 
 input ContactUpdateManyMutationInput {
-  emailOne: String
-  emailTwo: String
-  firstName: String
-  lastName: String
-  otherLocationsIds: String
-  phoneCell: String
-  phoneHome: String
-  primaryLocationId: Int
+  email_one: String
+  email_two: String
+  first_name: String
+  last_name: String
+  other_locations_ids: String
+  phone_cell: String
+  phone_home: String
+  primary_location_id: Int
   suffix: String
-  testContact: Boolean
+  test_contact: Boolean
 }
 
 input ContactUpdateOneInput {
@@ -937,7 +937,7 @@ input ContactWhereInput {
   id_lte: Int
   id_gt: Int
   id_gte: Int
-  emailOne: String
+  email_one: String
   emailOne_not: String
   emailOne_in: [String!]
   emailOne_not_in: [String!]
@@ -951,7 +951,7 @@ input ContactWhereInput {
   emailOne_not_starts_with: String
   emailOne_ends_with: String
   emailOne_not_ends_with: String
-  emailTwo: String
+  email_two: String
   emailTwo_not: String
   emailTwo_in: [String!]
   emailTwo_not_in: [String!]
@@ -965,7 +965,7 @@ input ContactWhereInput {
   emailTwo_not_starts_with: String
   emailTwo_ends_with: String
   emailTwo_not_ends_with: String
-  firstName: String
+  first_name: String
   firstName_not: String
   firstName_in: [String!]
   firstName_not_in: [String!]
@@ -979,7 +979,7 @@ input ContactWhereInput {
   firstName_not_starts_with: String
   firstName_ends_with: String
   firstName_not_ends_with: String
-  lastName: String
+  last_name: String
   lastName_not: String
   lastName_in: [String!]
   lastName_not_in: [String!]
@@ -993,7 +993,7 @@ input ContactWhereInput {
   lastName_not_starts_with: String
   lastName_ends_with: String
   lastName_not_ends_with: String
-  otherLocationsIds: String
+  other_locations_ids: String
   otherLocationsIds_not: String
   otherLocationsIds_in: [String!]
   otherLocationsIds_not_in: [String!]
@@ -1007,7 +1007,7 @@ input ContactWhereInput {
   otherLocationsIds_not_starts_with: String
   otherLocationsIds_ends_with: String
   otherLocationsIds_not_ends_with: String
-  phoneCell: String
+  phone_cell: String
   phoneCell_not: String
   phoneCell_in: [String!]
   phoneCell_not_in: [String!]
@@ -1021,7 +1021,7 @@ input ContactWhereInput {
   phoneCell_not_starts_with: String
   phoneCell_ends_with: String
   phoneCell_not_ends_with: String
-  phoneHome: String
+  phone_home: String
   phoneHome_not: String
   phoneHome_in: [String!]
   phoneHome_not_in: [String!]
@@ -1035,7 +1035,7 @@ input ContactWhereInput {
   phoneHome_not_starts_with: String
   phoneHome_ends_with: String
   phoneHome_not_ends_with: String
-  primaryLocationId: Int
+  primary_location_id: Int
   primaryLocationId_not: Int
   primaryLocationId_in: [Int!]
   primaryLocationId_not_in: [Int!]
@@ -1057,7 +1057,7 @@ input ContactWhereInput {
   suffix_not_starts_with: String
   suffix_ends_with: String
   suffix_not_ends_with: String
-  testContact: Boolean
+  test_contact: Boolean
   testContact_not: Boolean
   AND: [ContactWhereInput!]
   OR: [ContactWhereInput!]
@@ -1079,21 +1079,21 @@ type Lead {
     first: Int
     last: Int
   ): [Account!]
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
   email: String
-  firstName: String
-  gateCode: String
-  lastName: String
-  leadCampaign: LeadsCampaign
-  leadCreator: User
-  leadSourceId: Int
-  phoneCell: String
-  phoneHome: String
+  first_name: String
+  gate_code: String
+  last_name: String
+  lead_campaign: LeadsCampaign
+  lead_creator: User
+  lead_source_id: Int
+  phone_cell: String
+  phone_home: String
   stage: String
-  stateAbbr: String
-  testLead: Int
+  state_abbr: String
+  test_lead: Int
   zip: String
 }
 
@@ -1106,21 +1106,21 @@ type LeadConnection {
 input LeadCreateInput {
   id: Int
   accounts: AccountCreateManyWithoutFromLeadInput
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
   email: String
-  firstName: String
-  gateCode: String
-  lastName: String
-  leadCampaign: LeadsCampaignCreateOneWithoutLeadsInput
-  leadCreator: UserCreateOneWithoutLeadsInput
-  leadSourceId: Int
-  phoneCell: String
-  phoneHome: String
+  first_name: String
+  gate_code: String
+  last_name: String
+  lead_campaign: LeadsCampaignCreateOneWithoutLeadsInput
+  lead_creator: UserCreateOneWithoutLeadsInput
+  lead_source_id: Int
+  phone_cell: String
+  phone_home: String
   stage: String
-  stateAbbr: String
-  testLead: Int
+  state_abbr: String
+  test_lead: Int
   zip: String
 }
 
@@ -1141,61 +1141,61 @@ input LeadCreateOneWithoutAccountsInput {
 
 input LeadCreateWithoutAccountsInput {
   id: Int
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
   email: String
-  firstName: String
-  gateCode: String
-  lastName: String
-  leadCampaign: LeadsCampaignCreateOneWithoutLeadsInput
-  leadCreator: UserCreateOneWithoutLeadsInput
-  leadSourceId: Int
-  phoneCell: String
-  phoneHome: String
+  first_name: String
+  gate_code: String
+  last_name: String
+  lead_campaign: LeadsCampaignCreateOneWithoutLeadsInput
+  lead_creator: UserCreateOneWithoutLeadsInput
+  lead_source_id: Int
+  phone_cell: String
+  phone_home: String
   stage: String
-  stateAbbr: String
-  testLead: Int
+  state_abbr: String
+  test_lead: Int
   zip: String
 }
 
 input LeadCreateWithoutLeadCampaignInput {
   id: Int
   accounts: AccountCreateManyWithoutFromLeadInput
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
   email: String
-  firstName: String
-  gateCode: String
-  lastName: String
-  leadCreator: UserCreateOneWithoutLeadsInput
-  leadSourceId: Int
-  phoneCell: String
-  phoneHome: String
+  first_name: String
+  gate_code: String
+  last_name: String
+  lead_creator: UserCreateOneWithoutLeadsInput
+  lead_source_id: Int
+  phone_cell: String
+  phone_home: String
   stage: String
-  stateAbbr: String
-  testLead: Int
+  state_abbr: String
+  test_lead: Int
   zip: String
 }
 
 input LeadCreateWithoutLeadCreatorInput {
   id: Int
   accounts: AccountCreateManyWithoutFromLeadInput
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
   email: String
-  firstName: String
-  gateCode: String
-  lastName: String
-  leadCampaign: LeadsCampaignCreateOneWithoutLeadsInput
-  leadSourceId: Int
-  phoneCell: String
-  phoneHome: String
+  first_name: String
+  gate_code: String
+  last_name: String
+  lead_campaign: LeadsCampaignCreateOneWithoutLeadsInput
+  lead_source_id: Int
+  phone_cell: String
+  phone_home: String
   stage: String
-  stateAbbr: String
-  testLead: Int
+  state_abbr: String
+  test_lead: Int
   zip: String
 }
 
@@ -1239,19 +1239,19 @@ enum LeadOrderByInput {
 
 type LeadPreviousValues {
   id: Int!
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
   email: String
-  firstName: String
-  gateCode: String
-  lastName: String
-  leadSourceId: Int
-  phoneCell: String
-  phoneHome: String
+  first_name: String
+  gate_code: String
+  last_name: String
+  lead_source_id: Int
+  phone_cell: String
+  phone_home: String
   stage: String
-  stateAbbr: String
-  testLead: Int
+  state_abbr: String
+  test_lead: Int
   zip: String
 }
 
@@ -1264,7 +1264,7 @@ input LeadScalarWhereInput {
   id_lte: Int
   id_gt: Int
   id_gte: Int
-  addressOne: String
+  address_one: String
   addressOne_not: String
   addressOne_in: [String!]
   addressOne_not_in: [String!]
@@ -1278,7 +1278,7 @@ input LeadScalarWhereInput {
   addressOne_not_starts_with: String
   addressOne_ends_with: String
   addressOne_not_ends_with: String
-  addressTwo: String
+  address_two: String
   addressTwo_not: String
   addressTwo_in: [String!]
   addressTwo_not_in: [String!]
@@ -1320,7 +1320,7 @@ input LeadScalarWhereInput {
   email_not_starts_with: String
   email_ends_with: String
   email_not_ends_with: String
-  firstName: String
+  first_name: String
   firstName_not: String
   firstName_in: [String!]
   firstName_not_in: [String!]
@@ -1334,7 +1334,7 @@ input LeadScalarWhereInput {
   firstName_not_starts_with: String
   firstName_ends_with: String
   firstName_not_ends_with: String
-  gateCode: String
+  gate_code: String
   gateCode_not: String
   gateCode_in: [String!]
   gateCode_not_in: [String!]
@@ -1348,7 +1348,7 @@ input LeadScalarWhereInput {
   gateCode_not_starts_with: String
   gateCode_ends_with: String
   gateCode_not_ends_with: String
-  lastName: String
+  last_name: String
   lastName_not: String
   lastName_in: [String!]
   lastName_not_in: [String!]
@@ -1362,7 +1362,7 @@ input LeadScalarWhereInput {
   lastName_not_starts_with: String
   lastName_ends_with: String
   lastName_not_ends_with: String
-  leadSourceId: Int
+  lead_source_id: Int
   leadSourceId_not: Int
   leadSourceId_in: [Int!]
   leadSourceId_not_in: [Int!]
@@ -1370,7 +1370,7 @@ input LeadScalarWhereInput {
   leadSourceId_lte: Int
   leadSourceId_gt: Int
   leadSourceId_gte: Int
-  phoneCell: String
+  phone_cell: String
   phoneCell_not: String
   phoneCell_in: [String!]
   phoneCell_not_in: [String!]
@@ -1384,7 +1384,7 @@ input LeadScalarWhereInput {
   phoneCell_not_starts_with: String
   phoneCell_ends_with: String
   phoneCell_not_ends_with: String
-  phoneHome: String
+  phone_home: String
   phoneHome_not: String
   phoneHome_in: [String!]
   phoneHome_not_in: [String!]
@@ -1412,7 +1412,7 @@ input LeadScalarWhereInput {
   stage_not_starts_with: String
   stage_ends_with: String
   stage_not_ends_with: String
-  stateAbbr: String
+  state_abbr: String
   stateAbbr_not: String
   stateAbbr_in: [String!]
   stateAbbr_not_in: [String!]
@@ -1426,7 +1426,7 @@ input LeadScalarWhereInput {
   stateAbbr_not_starts_with: String
   stateAbbr_ends_with: String
   stateAbbr_not_ends_with: String
-  testLead: Int
+  test_lead: Int
   testLead_not: Int
   testLead_in: [Int!]
   testLead_not_in: [Int!]
@@ -1456,8 +1456,8 @@ input LeadScalarWhereInput {
 type LeadsCampaign {
   id: Int!
   active: Boolean
-  companyId: Int
-  leadDirection: Int
+  company_id: Int
+  lead_direction: Int
   leads(
     where: LeadWhereInput
     orderBy: LeadOrderByInput
@@ -1467,9 +1467,9 @@ type LeadsCampaign {
     first: Int
     last: Int
   ): [Lead!]
-  leadSource: LeadsSource
+  lead_source: LeadsSource
   name: String
-  testLeadCampaign: Boolean
+  test_lead_campaign: Boolean
 }
 
 type LeadsCampaignConnection {
@@ -1481,12 +1481,12 @@ type LeadsCampaignConnection {
 input LeadsCampaignCreateInput {
   id: Int
   active: Boolean
-  companyId: Int
-  leadDirection: Int
+  company_id: Int
+  lead_direction: Int
   leads: LeadCreateManyWithoutLeadCampaignInput
-  leadSource: LeadsSourceCreateOneWithoutLeadsCampaignsInput
+  lead_source: LeadsSourceCreateOneWithoutLeadsCampaignsInput
   name: String
-  testLeadCampaign: Boolean
+  test_lead_campaign: Boolean
 }
 
 input LeadsCampaignCreateManyWithoutLeadSourceInput {
@@ -1502,21 +1502,21 @@ input LeadsCampaignCreateOneWithoutLeadsInput {
 input LeadsCampaignCreateWithoutLeadsInput {
   id: Int
   active: Boolean
-  companyId: Int
-  leadDirection: Int
-  leadSource: LeadsSourceCreateOneWithoutLeadsCampaignsInput
+  company_id: Int
+  lead_direction: Int
+  lead_source: LeadsSourceCreateOneWithoutLeadsCampaignsInput
   name: String
-  testLeadCampaign: Boolean
+  test_lead_campaign: Boolean
 }
 
 input LeadsCampaignCreateWithoutLeadSourceInput {
   id: Int
   active: Boolean
-  companyId: Int
-  leadDirection: Int
+  company_id: Int
+  lead_direction: Int
   leads: LeadCreateManyWithoutLeadCampaignInput
   name: String
-  testLeadCampaign: Boolean
+  test_lead_campaign: Boolean
 }
 
 type LeadsCampaignEdge {
@@ -1542,10 +1542,10 @@ enum LeadsCampaignOrderByInput {
 type LeadsCampaignPreviousValues {
   id: Int!
   active: Boolean
-  companyId: Int
-  leadDirection: Int
+  company_id: Int
+  lead_direction: Int
   name: String
-  testLeadCampaign: Boolean
+  test_lead_campaign: Boolean
 }
 
 input LeadsCampaignScalarWhereInput {
@@ -1559,7 +1559,7 @@ input LeadsCampaignScalarWhereInput {
   id_gte: Int
   active: Boolean
   active_not: Boolean
-  companyId: Int
+  company_id: Int
   companyId_not: Int
   companyId_in: [Int!]
   companyId_not_in: [Int!]
@@ -1567,7 +1567,7 @@ input LeadsCampaignScalarWhereInput {
   companyId_lte: Int
   companyId_gt: Int
   companyId_gte: Int
-  leadDirection: Int
+  lead_direction: Int
   leadDirection_not: Int
   leadDirection_in: [Int!]
   leadDirection_not_in: [Int!]
@@ -1589,7 +1589,7 @@ input LeadsCampaignScalarWhereInput {
   name_not_starts_with: String
   name_ends_with: String
   name_not_ends_with: String
-  testLeadCampaign: Boolean
+  test_lead_campaign: Boolean
   testLeadCampaign_not: Boolean
   AND: [LeadsCampaignScalarWhereInput!]
   OR: [LeadsCampaignScalarWhereInput!]
@@ -1616,28 +1616,28 @@ input LeadsCampaignSubscriptionWhereInput {
 
 input LeadsCampaignUpdateInput {
   active: Boolean
-  companyId: Int
-  leadDirection: Int
+  company_id: Int
+  lead_direction: Int
   leads: LeadUpdateManyWithoutLeadCampaignInput
-  leadSource: LeadsSourceUpdateOneWithoutLeadsCampaignsInput
+  lead_source: LeadsSourceUpdateOneWithoutLeadsCampaignsInput
   name: String
-  testLeadCampaign: Boolean
+  test_lead_campaign: Boolean
 }
 
 input LeadsCampaignUpdateManyDataInput {
   active: Boolean
-  companyId: Int
-  leadDirection: Int
+  company_id: Int
+  lead_direction: Int
   name: String
-  testLeadCampaign: Boolean
+  test_lead_campaign: Boolean
 }
 
 input LeadsCampaignUpdateManyMutationInput {
   active: Boolean
-  companyId: Int
-  leadDirection: Int
+  company_id: Int
+  lead_direction: Int
   name: String
-  testLeadCampaign: Boolean
+  test_lead_campaign: Boolean
 }
 
 input LeadsCampaignUpdateManyWithoutLeadSourceInput {
@@ -1668,20 +1668,20 @@ input LeadsCampaignUpdateOneWithoutLeadsInput {
 
 input LeadsCampaignUpdateWithoutLeadsDataInput {
   active: Boolean
-  companyId: Int
-  leadDirection: Int
-  leadSource: LeadsSourceUpdateOneWithoutLeadsCampaignsInput
+  company_id: Int
+  lead_direction: Int
+  lead_source: LeadsSourceUpdateOneWithoutLeadsCampaignsInput
   name: String
-  testLeadCampaign: Boolean
+  test_lead_campaign: Boolean
 }
 
 input LeadsCampaignUpdateWithoutLeadSourceDataInput {
   active: Boolean
-  companyId: Int
-  leadDirection: Int
+  company_id: Int
+  lead_direction: Int
   leads: LeadUpdateManyWithoutLeadCampaignInput
   name: String
-  testLeadCampaign: Boolean
+  test_lead_campaign: Boolean
 }
 
 input LeadsCampaignUpdateWithWhereUniqueWithoutLeadSourceInput {
@@ -1711,7 +1711,7 @@ input LeadsCampaignWhereInput {
   id_gte: Int
   active: Boolean
   active_not: Boolean
-  companyId: Int
+  company_id: Int
   companyId_not: Int
   companyId_in: [Int!]
   companyId_not_in: [Int!]
@@ -1719,7 +1719,7 @@ input LeadsCampaignWhereInput {
   companyId_lte: Int
   companyId_gt: Int
   companyId_gte: Int
-  leadDirection: Int
+  lead_direction: Int
   leadDirection_not: Int
   leadDirection_in: [Int!]
   leadDirection_not_in: [Int!]
@@ -1730,7 +1730,7 @@ input LeadsCampaignWhereInput {
   leads_every: LeadWhereInput
   leads_some: LeadWhereInput
   leads_none: LeadWhereInput
-  leadSource: LeadsSourceWhereInput
+  lead_source: LeadsSourceWhereInput
   name: String
   name_not: String
   name_in: [String!]
@@ -1745,7 +1745,7 @@ input LeadsCampaignWhereInput {
   name_not_starts_with: String
   name_ends_with: String
   name_not_ends_with: String
-  testLeadCampaign: Boolean
+  test_lead_campaign: Boolean
   testLeadCampaign_not: Boolean
   AND: [LeadsCampaignWhereInput!]
   OR: [LeadsCampaignWhereInput!]
@@ -1769,7 +1769,7 @@ type LeadsSource {
     last: Int
   ): [LeadsCampaign!]
   name: String
-  testLeadSource: Boolean
+  test_lead_source: Boolean
   type: String
 }
 
@@ -1784,7 +1784,7 @@ input LeadsSourceCreateInput {
   active: Boolean
   leadsCampaigns: LeadsCampaignCreateManyWithoutLeadSourceInput
   name: String
-  testLeadSource: Boolean
+  test_lead_source: Boolean
   type: String
 }
 
@@ -1797,7 +1797,7 @@ input LeadsSourceCreateWithoutLeadsCampaignsInput {
   id: Int
   active: Boolean
   name: String
-  testLeadSource: Boolean
+  test_lead_source: Boolean
   type: String
 }
 
@@ -1823,7 +1823,7 @@ type LeadsSourcePreviousValues {
   id: Int!
   active: Boolean
   name: String
-  testLeadSource: Boolean
+  test_lead_source: Boolean
   type: String
 }
 
@@ -1849,14 +1849,14 @@ input LeadsSourceUpdateInput {
   active: Boolean
   leadsCampaigns: LeadsCampaignUpdateManyWithoutLeadSourceInput
   name: String
-  testLeadSource: Boolean
+  test_lead_source: Boolean
   type: String
 }
 
 input LeadsSourceUpdateManyMutationInput {
   active: Boolean
   name: String
-  testLeadSource: Boolean
+  test_lead_source: Boolean
   type: String
 }
 
@@ -1872,7 +1872,7 @@ input LeadsSourceUpdateOneWithoutLeadsCampaignsInput {
 input LeadsSourceUpdateWithoutLeadsCampaignsDataInput {
   active: Boolean
   name: String
-  testLeadSource: Boolean
+  test_lead_source: Boolean
   type: String
 }
 
@@ -1909,7 +1909,7 @@ input LeadsSourceWhereInput {
   name_not_starts_with: String
   name_ends_with: String
   name_not_ends_with: String
-  testLeadSource: Boolean
+  test_lead_source: Boolean
   testLeadSource_not: Boolean
   type: String
   type_not: String
@@ -1954,55 +1954,55 @@ input LeadSubscriptionWhereInput {
 
 input LeadUpdateInput {
   accounts: AccountUpdateManyWithoutFromLeadInput
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
   email: String
-  firstName: String
-  gateCode: String
-  lastName: String
-  leadCampaign: LeadsCampaignUpdateOneWithoutLeadsInput
-  leadCreator: UserUpdateOneWithoutLeadsInput
-  leadSourceId: Int
-  phoneCell: String
-  phoneHome: String
+  first_name: String
+  gate_code: String
+  last_name: String
+  lead_campaign: LeadsCampaignUpdateOneWithoutLeadsInput
+  lead_creator: UserUpdateOneWithoutLeadsInput
+  lead_source_id: Int
+  phone_cell: String
+  phone_home: String
   stage: String
-  stateAbbr: String
-  testLead: Int
+  state_abbr: String
+  test_lead: Int
   zip: String
 }
 
 input LeadUpdateManyDataInput {
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
   email: String
-  firstName: String
-  gateCode: String
-  lastName: String
-  leadSourceId: Int
-  phoneCell: String
-  phoneHome: String
+  first_name: String
+  gate_code: String
+  last_name: String
+  lead_source_id: Int
+  phone_cell: String
+  phone_home: String
   stage: String
-  stateAbbr: String
-  testLead: Int
+  state_abbr: String
+  test_lead: Int
   zip: String
 }
 
 input LeadUpdateManyMutationInput {
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
   email: String
-  firstName: String
-  gateCode: String
-  lastName: String
-  leadSourceId: Int
-  phoneCell: String
-  phoneHome: String
+  first_name: String
+  gate_code: String
+  last_name: String
+  lead_source_id: Int
+  phone_cell: String
+  phone_home: String
   stage: String
-  stateAbbr: String
-  testLead: Int
+  state_abbr: String
+  test_lead: Int
   zip: String
 }
 
@@ -2045,59 +2045,59 @@ input LeadUpdateOneWithoutAccountsInput {
 }
 
 input LeadUpdateWithoutAccountsDataInput {
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
   email: String
-  firstName: String
-  gateCode: String
-  lastName: String
-  leadCampaign: LeadsCampaignUpdateOneWithoutLeadsInput
-  leadCreator: UserUpdateOneWithoutLeadsInput
-  leadSourceId: Int
-  phoneCell: String
-  phoneHome: String
+  first_name: String
+  gate_code: String
+  last_name: String
+  lead_campaign: LeadsCampaignUpdateOneWithoutLeadsInput
+  lead_creator: UserUpdateOneWithoutLeadsInput
+  lead_source_id: Int
+  phone_cell: String
+  phone_home: String
   stage: String
-  stateAbbr: String
-  testLead: Int
+  state_abbr: String
+  test_lead: Int
   zip: String
 }
 
 input LeadUpdateWithoutLeadCampaignDataInput {
   accounts: AccountUpdateManyWithoutFromLeadInput
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
   email: String
-  firstName: String
-  gateCode: String
-  lastName: String
-  leadCreator: UserUpdateOneWithoutLeadsInput
-  leadSourceId: Int
-  phoneCell: String
-  phoneHome: String
+  first_name: String
+  gate_code: String
+  last_name: String
+  lead_creator: UserUpdateOneWithoutLeadsInput
+  lead_source_id: Int
+  phone_cell: String
+  phone_home: String
   stage: String
-  stateAbbr: String
-  testLead: Int
+  state_abbr: String
+  test_lead: Int
   zip: String
 }
 
 input LeadUpdateWithoutLeadCreatorDataInput {
   accounts: AccountUpdateManyWithoutFromLeadInput
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
   email: String
-  firstName: String
-  gateCode: String
-  lastName: String
-  leadCampaign: LeadsCampaignUpdateOneWithoutLeadsInput
-  leadSourceId: Int
-  phoneCell: String
-  phoneHome: String
+  first_name: String
+  gate_code: String
+  last_name: String
+  lead_campaign: LeadsCampaignUpdateOneWithoutLeadsInput
+  lead_source_id: Int
+  phone_cell: String
+  phone_home: String
   stage: String
-  stateAbbr: String
-  testLead: Int
+  state_abbr: String
+  test_lead: Int
   zip: String
 }
 
@@ -2140,7 +2140,7 @@ input LeadWhereInput {
   accounts_every: AccountWhereInput
   accounts_some: AccountWhereInput
   accounts_none: AccountWhereInput
-  addressOne: String
+  address_one: String
   addressOne_not: String
   addressOne_in: [String!]
   addressOne_not_in: [String!]
@@ -2154,7 +2154,7 @@ input LeadWhereInput {
   addressOne_not_starts_with: String
   addressOne_ends_with: String
   addressOne_not_ends_with: String
-  addressTwo: String
+  address_two: String
   addressTwo_not: String
   addressTwo_in: [String!]
   addressTwo_not_in: [String!]
@@ -2196,7 +2196,7 @@ input LeadWhereInput {
   email_not_starts_with: String
   email_ends_with: String
   email_not_ends_with: String
-  firstName: String
+  first_name: String
   firstName_not: String
   firstName_in: [String!]
   firstName_not_in: [String!]
@@ -2210,7 +2210,7 @@ input LeadWhereInput {
   firstName_not_starts_with: String
   firstName_ends_with: String
   firstName_not_ends_with: String
-  gateCode: String
+  gate_code: String
   gateCode_not: String
   gateCode_in: [String!]
   gateCode_not_in: [String!]
@@ -2224,7 +2224,7 @@ input LeadWhereInput {
   gateCode_not_starts_with: String
   gateCode_ends_with: String
   gateCode_not_ends_with: String
-  lastName: String
+  last_name: String
   lastName_not: String
   lastName_in: [String!]
   lastName_not_in: [String!]
@@ -2238,9 +2238,9 @@ input LeadWhereInput {
   lastName_not_starts_with: String
   lastName_ends_with: String
   lastName_not_ends_with: String
-  leadCampaign: LeadsCampaignWhereInput
-  leadCreator: UserWhereInput
-  leadSourceId: Int
+  lead_campaign: LeadsCampaignWhereInput
+  lead_creator: UserWhereInput
+  lead_source_id: Int
   leadSourceId_not: Int
   leadSourceId_in: [Int!]
   leadSourceId_not_in: [Int!]
@@ -2248,7 +2248,7 @@ input LeadWhereInput {
   leadSourceId_lte: Int
   leadSourceId_gt: Int
   leadSourceId_gte: Int
-  phoneCell: String
+  phone_cell: String
   phoneCell_not: String
   phoneCell_in: [String!]
   phoneCell_not_in: [String!]
@@ -2262,7 +2262,7 @@ input LeadWhereInput {
   phoneCell_not_starts_with: String
   phoneCell_ends_with: String
   phoneCell_not_ends_with: String
-  phoneHome: String
+  phone_home: String
   phoneHome_not: String
   phoneHome_in: [String!]
   phoneHome_not_in: [String!]
@@ -2290,7 +2290,7 @@ input LeadWhereInput {
   stage_not_starts_with: String
   stage_ends_with: String
   stage_not_ends_with: String
-  stateAbbr: String
+  state_abbr: String
   stateAbbr_not: String
   stateAbbr_in: [String!]
   stateAbbr_not_in: [String!]
@@ -2304,7 +2304,7 @@ input LeadWhereInput {
   stateAbbr_not_starts_with: String
   stateAbbr_ends_with: String
   stateAbbr_not_ends_with: String
-  testLead: Int
+  test_lead: Int
   testLead_not: Int
   testLead_in: [Int!]
   testLead_not_in: [Int!]
@@ -2346,13 +2346,13 @@ type Location {
     first: Int
     last: Int
   ): [Account!]
-  acctNumId: Int
-  addressOne: String
-  addressTwo: String
+  acct_num_id: Int
+  address_one: String
+  address_two: String
   city: String
-  gateCode: String
-  stateAbbr: String
-  testLocation: Boolean
+  gate_code: String
+  state_abbr: String
+  test_location: Boolean
   zip: String
 }
 
@@ -2365,13 +2365,13 @@ type LocationConnection {
 input LocationCreateInput {
   id: Int
   accounts: AccountCreateManyWithoutLocationInput
-  acctNumId: Int
-  addressOne: String
-  addressTwo: String
+  acct_num_id: Int
+  address_one: String
+  address_two: String
   city: String
-  gateCode: String
-  stateAbbr: String
-  testLocation: Boolean
+  gate_code: String
+  state_abbr: String
+  test_location: Boolean
   zip: String
 }
 
@@ -2382,13 +2382,13 @@ input LocationCreateOneWithoutAccountsInput {
 
 input LocationCreateWithoutAccountsInput {
   id: Int
-  acctNumId: Int
-  addressOne: String
-  addressTwo: String
+  acct_num_id: Int
+  address_one: String
+  address_two: String
   city: String
-  gateCode: String
-  stateAbbr: String
-  testLocation: Boolean
+  gate_code: String
+  state_abbr: String
+  test_location: Boolean
   zip: String
 }
 
@@ -2420,13 +2420,13 @@ enum LocationOrderByInput {
 
 type LocationPreviousValues {
   id: Int!
-  acctNumId: Int
-  addressOne: String
-  addressTwo: String
+  acct_num_id: Int
+  address_one: String
+  address_two: String
   city: String
-  gateCode: String
-  stateAbbr: String
-  testLocation: Boolean
+  gate_code: String
+  state_abbr: String
+  test_location: Boolean
   zip: String
 }
 
@@ -2450,24 +2450,24 @@ input LocationSubscriptionWhereInput {
 
 input LocationUpdateInput {
   accounts: AccountUpdateManyWithoutLocationInput
-  acctNumId: Int
-  addressOne: String
-  addressTwo: String
+  acct_num_id: Int
+  address_one: String
+  address_two: String
   city: String
-  gateCode: String
-  stateAbbr: String
-  testLocation: Boolean
+  gate_code: String
+  state_abbr: String
+  test_location: Boolean
   zip: String
 }
 
 input LocationUpdateManyMutationInput {
-  acctNumId: Int
-  addressOne: String
-  addressTwo: String
+  acct_num_id: Int
+  address_one: String
+  address_two: String
   city: String
-  gateCode: String
-  stateAbbr: String
-  testLocation: Boolean
+  gate_code: String
+  state_abbr: String
+  test_location: Boolean
   zip: String
 }
 
@@ -2481,13 +2481,13 @@ input LocationUpdateOneWithoutAccountsInput {
 }
 
 input LocationUpdateWithoutAccountsDataInput {
-  acctNumId: Int
-  addressOne: String
-  addressTwo: String
+  acct_num_id: Int
+  address_one: String
+  address_two: String
   city: String
-  gateCode: String
-  stateAbbr: String
-  testLocation: Boolean
+  gate_code: String
+  state_abbr: String
+  test_location: Boolean
   zip: String
 }
 
@@ -2508,7 +2508,7 @@ input LocationWhereInput {
   accounts_every: AccountWhereInput
   accounts_some: AccountWhereInput
   accounts_none: AccountWhereInput
-  acctNumId: Int
+  acct_num_id: Int
   acctNumId_not: Int
   acctNumId_in: [Int!]
   acctNumId_not_in: [Int!]
@@ -2516,7 +2516,7 @@ input LocationWhereInput {
   acctNumId_lte: Int
   acctNumId_gt: Int
   acctNumId_gte: Int
-  addressOne: String
+  address_one: String
   addressOne_not: String
   addressOne_in: [String!]
   addressOne_not_in: [String!]
@@ -2530,7 +2530,7 @@ input LocationWhereInput {
   addressOne_not_starts_with: String
   addressOne_ends_with: String
   addressOne_not_ends_with: String
-  addressTwo: String
+  address_two: String
   addressTwo_not: String
   addressTwo_in: [String!]
   addressTwo_not_in: [String!]
@@ -2558,7 +2558,7 @@ input LocationWhereInput {
   city_not_starts_with: String
   city_ends_with: String
   city_not_ends_with: String
-  gateCode: String
+  gate_code: String
   gateCode_not: String
   gateCode_in: [String!]
   gateCode_not_in: [String!]
@@ -2572,7 +2572,7 @@ input LocationWhereInput {
   gateCode_not_starts_with: String
   gateCode_ends_with: String
   gateCode_not_ends_with: String
-  stateAbbr: String
+  state_abbr: String
   stateAbbr_not: String
   stateAbbr_in: [String!]
   stateAbbr_not_in: [String!]
@@ -2586,7 +2586,7 @@ input LocationWhereInput {
   stateAbbr_not_starts_with: String
   stateAbbr_ends_with: String
   stateAbbr_not_ends_with: String
-  testLocation: Boolean
+  test_location: Boolean
   testLocation_not: Boolean
   zip: String
   zip_not: String
@@ -2805,10 +2805,10 @@ interface Node {
 
 type Office {
   id: Int!
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
-  hasWarehouse: Boolean
+  has_warehouse: Boolean
   name: String
   salesTeams(
     where: SalesTeamWhereInput
@@ -2819,8 +2819,8 @@ type Office {
     first: Int
     last: Int
   ): [SalesTeam!]
-  stateAbbr: String
-  testOffice: Boolean
+  state_abbr: String
+  test_office: Boolean
   zip: String
 }
 
@@ -2832,14 +2832,14 @@ type OfficeConnection {
 
 input OfficeCreateInput {
   id: Int
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
-  hasWarehouse: Boolean
+  has_warehouse: Boolean
   name: String
   salesTeams: SalesTeamCreateManyWithoutOfficeInput
-  stateAbbr: String
-  testOffice: Boolean
+  state_abbr: String
+  test_office: Boolean
   zip: String
 }
 
@@ -2850,13 +2850,13 @@ input OfficeCreateOneWithoutSalesTeamsInput {
 
 input OfficeCreateWithoutSalesTeamsInput {
   id: Int
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
-  hasWarehouse: Boolean
+  has_warehouse: Boolean
   name: String
-  stateAbbr: String
-  testOffice: Boolean
+  state_abbr: String
+  test_office: Boolean
   zip: String
 }
 
@@ -2888,13 +2888,13 @@ enum OfficeOrderByInput {
 
 type OfficePreviousValues {
   id: Int!
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
-  hasWarehouse: Boolean
+  has_warehouse: Boolean
   name: String
-  stateAbbr: String
-  testOffice: Boolean
+  state_abbr: String
+  test_office: Boolean
   zip: String
 }
 
@@ -2917,25 +2917,25 @@ input OfficeSubscriptionWhereInput {
 }
 
 input OfficeUpdateInput {
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
-  hasWarehouse: Boolean
+  has_warehouse: Boolean
   name: String
   salesTeams: SalesTeamUpdateManyWithoutOfficeInput
-  stateAbbr: String
-  testOffice: Boolean
+  state_abbr: String
+  test_office: Boolean
   zip: String
 }
 
 input OfficeUpdateManyMutationInput {
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
-  hasWarehouse: Boolean
+  has_warehouse: Boolean
   name: String
-  stateAbbr: String
-  testOffice: Boolean
+  state_abbr: String
+  test_office: Boolean
   zip: String
 }
 
@@ -2949,13 +2949,13 @@ input OfficeUpdateOneWithoutSalesTeamsInput {
 }
 
 input OfficeUpdateWithoutSalesTeamsDataInput {
-  addressOne: String
-  addressTwo: String
+  address_one: String
+  address_two: String
   city: String
-  hasWarehouse: Boolean
+  has_warehouse: Boolean
   name: String
-  stateAbbr: String
-  testOffice: Boolean
+  state_abbr: String
+  test_office: Boolean
   zip: String
 }
 
@@ -2973,7 +2973,7 @@ input OfficeWhereInput {
   id_lte: Int
   id_gt: Int
   id_gte: Int
-  addressOne: String
+  address_one: String
   addressOne_not: String
   addressOne_in: [String!]
   addressOne_not_in: [String!]
@@ -2987,7 +2987,7 @@ input OfficeWhereInput {
   addressOne_not_starts_with: String
   addressOne_ends_with: String
   addressOne_not_ends_with: String
-  addressTwo: String
+  address_two: String
   addressTwo_not: String
   addressTwo_in: [String!]
   addressTwo_not_in: [String!]
@@ -3015,7 +3015,7 @@ input OfficeWhereInput {
   city_not_starts_with: String
   city_ends_with: String
   city_not_ends_with: String
-  hasWarehouse: Boolean
+  has_warehouse: Boolean
   hasWarehouse_not: Boolean
   name: String
   name_not: String
@@ -3034,7 +3034,7 @@ input OfficeWhereInput {
   salesTeams_every: SalesTeamWhereInput
   salesTeams_some: SalesTeamWhereInput
   salesTeams_none: SalesTeamWhereInput
-  stateAbbr: String
+  state_abbr: String
   stateAbbr_not: String
   stateAbbr_in: [String!]
   stateAbbr_not_in: [String!]
@@ -3048,7 +3048,7 @@ input OfficeWhereInput {
   stateAbbr_not_starts_with: String
   stateAbbr_ends_with: String
   stateAbbr_not_ends_with: String
-  testOffice: Boolean
+  test_office: Boolean
   testOffice_not: Boolean
   zip: String
   zip_not: String
@@ -3315,9 +3315,9 @@ type Query {
 
 type Role {
   id: Int!
-  defaultAccess: String
+  default_access: String
   name: String
-  testRole: Boolean
+  test_role: Boolean
   users(
     where: UserWhereInput
     orderBy: UserOrderByInput
@@ -3337,9 +3337,9 @@ type RoleConnection {
 
 input RoleCreateInput {
   id: Int
-  defaultAccess: String
+  default_access: String
   name: String
-  testRole: Boolean
+  test_role: Boolean
   users: UserCreateManyWithoutRoleInput
 }
 
@@ -3350,9 +3350,9 @@ input RoleCreateOneWithoutUsersInput {
 
 input RoleCreateWithoutUsersInput {
   id: Int
-  defaultAccess: String
+  default_access: String
   name: String
-  testRole: Boolean
+  test_role: Boolean
 }
 
 type RoleEdge {
@@ -3373,9 +3373,9 @@ enum RoleOrderByInput {
 
 type RolePreviousValues {
   id: Int!
-  defaultAccess: String
+  default_access: String
   name: String
-  testRole: Boolean
+  test_role: Boolean
 }
 
 type RoleSubscriptionPayload {
@@ -3397,16 +3397,16 @@ input RoleSubscriptionWhereInput {
 }
 
 input RoleUpdateInput {
-  defaultAccess: String
+  default_access: String
   name: String
-  testRole: Boolean
+  test_role: Boolean
   users: UserUpdateManyWithoutRoleInput
 }
 
 input RoleUpdateManyMutationInput {
-  defaultAccess: String
+  default_access: String
   name: String
-  testRole: Boolean
+  test_role: Boolean
 }
 
 input RoleUpdateOneWithoutUsersInput {
@@ -3419,9 +3419,9 @@ input RoleUpdateOneWithoutUsersInput {
 }
 
 input RoleUpdateWithoutUsersDataInput {
-  defaultAccess: String
+  default_access: String
   name: String
-  testRole: Boolean
+  test_role: Boolean
 }
 
 input RoleUpsertWithoutUsersInput {
@@ -3438,7 +3438,7 @@ input RoleWhereInput {
   id_lte: Int
   id_gt: Int
   id_gte: Int
-  defaultAccess: String
+  default_access: String
   defaultAccess_not: String
   defaultAccess_in: [String!]
   defaultAccess_not_in: [String!]
@@ -3466,7 +3466,7 @@ input RoleWhereInput {
   name_not_starts_with: String
   name_ends_with: String
   name_not_ends_with: String
-  testRole: Boolean
+  test_role: Boolean
   testRole_not: Boolean
   users_every: UserWhereInput
   users_some: UserWhereInput
@@ -3485,11 +3485,11 @@ type SalesTeam {
   active: Boolean
   name: String
   office: Office
-  teamChild: Int
-  teamLeadOne: User
-  teamLeadTwo: Int
-  teamParent: Int
-  testSalesTeam: Boolean
+  team_child: Int
+  team_lead_one: User
+  team_lead_two: Int
+  team_parent: Int
+  test_sales_team: Boolean
   type: String
   users(
     where: UserWhereInput
@@ -3513,11 +3513,11 @@ input SalesTeamCreateInput {
   active: Boolean
   name: String
   office: OfficeCreateOneWithoutSalesTeamsInput
-  teamChild: Int
-  teamLeadOne: UserCreateOneWithoutSalesTeamsInput
-  teamLeadTwo: Int
-  teamParent: Int
-  testSalesTeam: Boolean
+  team_child: Int
+  team_lead_one: UserCreateOneWithoutSalesTeamsInput
+  team_lead_two: Int
+  team_parent: Int
+  test_sales_team: Boolean
   type: String
   users: UserCreateManyWithoutTeamInput
 }
@@ -3541,11 +3541,11 @@ input SalesTeamCreateWithoutOfficeInput {
   team_id: Int
   active: Boolean
   name: String
-  teamChild: Int
-  teamLeadOne: UserCreateOneWithoutSalesTeamsInput
-  teamLeadTwo: Int
-  teamParent: Int
-  testSalesTeam: Boolean
+  team_child: Int
+  team_lead_one: UserCreateOneWithoutSalesTeamsInput
+  team_lead_two: Int
+  team_parent: Int
+  test_sales_team: Boolean
   type: String
   users: UserCreateManyWithoutTeamInput
 }
@@ -3555,10 +3555,10 @@ input SalesTeamCreateWithoutTeamLeadOneInput {
   active: Boolean
   name: String
   office: OfficeCreateOneWithoutSalesTeamsInput
-  teamChild: Int
-  teamLeadTwo: Int
-  teamParent: Int
-  testSalesTeam: Boolean
+  team_child: Int
+  team_lead_two: Int
+  team_parent: Int
+  test_sales_team: Boolean
   type: String
   users: UserCreateManyWithoutTeamInput
 }
@@ -3568,11 +3568,11 @@ input SalesTeamCreateWithoutUsersInput {
   active: Boolean
   name: String
   office: OfficeCreateOneWithoutSalesTeamsInput
-  teamChild: Int
-  teamLeadOne: UserCreateOneWithoutSalesTeamsInput
-  teamLeadTwo: Int
-  teamParent: Int
-  testSalesTeam: Boolean
+  team_child: Int
+  team_lead_one: UserCreateOneWithoutSalesTeamsInput
+  team_lead_two: Int
+  team_parent: Int
+  test_sales_team: Boolean
   type: String
 }
 
@@ -3604,10 +3604,10 @@ type SalesTeamPreviousValues {
   team_id: Int!
   active: Boolean
   name: String
-  teamChild: Int
-  teamLeadTwo: Int
-  teamParent: Int
-  testSalesTeam: Boolean
+  team_child: Int
+  team_lead_two: Int
+  team_parent: Int
+  test_sales_team: Boolean
   type: String
 }
 
@@ -3636,7 +3636,7 @@ input SalesTeamScalarWhereInput {
   name_not_starts_with: String
   name_ends_with: String
   name_not_ends_with: String
-  teamChild: Int
+  team_child: Int
   teamChild_not: Int
   teamChild_in: [Int!]
   teamChild_not_in: [Int!]
@@ -3644,7 +3644,7 @@ input SalesTeamScalarWhereInput {
   teamChild_lte: Int
   teamChild_gt: Int
   teamChild_gte: Int
-  teamLeadTwo: Int
+  team_lead_two: Int
   teamLeadTwo_not: Int
   teamLeadTwo_in: [Int!]
   teamLeadTwo_not_in: [Int!]
@@ -3652,7 +3652,7 @@ input SalesTeamScalarWhereInput {
   teamLeadTwo_lte: Int
   teamLeadTwo_gt: Int
   teamLeadTwo_gte: Int
-  teamParent: Int
+  team_parent: Int
   teamParent_not: Int
   teamParent_in: [Int!]
   teamParent_not_in: [Int!]
@@ -3660,7 +3660,7 @@ input SalesTeamScalarWhereInput {
   teamParent_lte: Int
   teamParent_gt: Int
   teamParent_gte: Int
-  testSalesTeam: Boolean
+  test_sales_team: Boolean
   testSalesTeam_not: Boolean
   type: String
   type_not: String
@@ -3703,11 +3703,11 @@ input SalesTeamUpdateInput {
   active: Boolean
   name: String
   office: OfficeUpdateOneWithoutSalesTeamsInput
-  teamChild: Int
-  teamLeadOne: UserUpdateOneWithoutSalesTeamsInput
-  teamLeadTwo: Int
-  teamParent: Int
-  testSalesTeam: Boolean
+  team_child: Int
+  team_lead_one: UserUpdateOneWithoutSalesTeamsInput
+  team_lead_two: Int
+  team_parent: Int
+  test_sales_team: Boolean
   type: String
   users: UserUpdateManyWithoutTeamInput
 }
@@ -3715,20 +3715,20 @@ input SalesTeamUpdateInput {
 input SalesTeamUpdateManyDataInput {
   active: Boolean
   name: String
-  teamChild: Int
-  teamLeadTwo: Int
-  teamParent: Int
-  testSalesTeam: Boolean
+  team_child: Int
+  team_lead_two: Int
+  team_parent: Int
+  test_sales_team: Boolean
   type: String
 }
 
 input SalesTeamUpdateManyMutationInput {
   active: Boolean
   name: String
-  teamChild: Int
-  teamLeadTwo: Int
-  teamParent: Int
-  testSalesTeam: Boolean
+  team_child: Int
+  team_lead_two: Int
+  team_parent: Int
+  test_sales_team: Boolean
   type: String
 }
 
@@ -3773,11 +3773,11 @@ input SalesTeamUpdateOneWithoutUsersInput {
 input SalesTeamUpdateWithoutOfficeDataInput {
   active: Boolean
   name: String
-  teamChild: Int
-  teamLeadOne: UserUpdateOneWithoutSalesTeamsInput
-  teamLeadTwo: Int
-  teamParent: Int
-  testSalesTeam: Boolean
+  team_child: Int
+  team_lead_one: UserUpdateOneWithoutSalesTeamsInput
+  team_lead_two: Int
+  team_parent: Int
+  test_sales_team: Boolean
   type: String
   users: UserUpdateManyWithoutTeamInput
 }
@@ -3786,10 +3786,10 @@ input SalesTeamUpdateWithoutTeamLeadOneDataInput {
   active: Boolean
   name: String
   office: OfficeUpdateOneWithoutSalesTeamsInput
-  teamChild: Int
-  teamLeadTwo: Int
-  teamParent: Int
-  testSalesTeam: Boolean
+  team_child: Int
+  team_lead_two: Int
+  team_parent: Int
+  test_sales_team: Boolean
   type: String
   users: UserUpdateManyWithoutTeamInput
 }
@@ -3798,11 +3798,11 @@ input SalesTeamUpdateWithoutUsersDataInput {
   active: Boolean
   name: String
   office: OfficeUpdateOneWithoutSalesTeamsInput
-  teamChild: Int
-  teamLeadOne: UserUpdateOneWithoutSalesTeamsInput
-  teamLeadTwo: Int
-  teamParent: Int
-  testSalesTeam: Boolean
+  team_child: Int
+  team_lead_one: UserUpdateOneWithoutSalesTeamsInput
+  team_lead_two: Int
+  team_parent: Int
+  test_sales_team: Boolean
   type: String
 }
 
@@ -3859,7 +3859,7 @@ input SalesTeamWhereInput {
   name_ends_with: String
   name_not_ends_with: String
   office: OfficeWhereInput
-  teamChild: Int
+  team_child: Int
   teamChild_not: Int
   teamChild_in: [Int!]
   teamChild_not_in: [Int!]
@@ -3867,8 +3867,8 @@ input SalesTeamWhereInput {
   teamChild_lte: Int
   teamChild_gt: Int
   teamChild_gte: Int
-  teamLeadOne: UserWhereInput
-  teamLeadTwo: Int
+  team_lead_one: UserWhereInput
+  team_lead_two: Int
   teamLeadTwo_not: Int
   teamLeadTwo_in: [Int!]
   teamLeadTwo_not_in: [Int!]
@@ -3876,7 +3876,7 @@ input SalesTeamWhereInput {
   teamLeadTwo_lte: Int
   teamLeadTwo_gt: Int
   teamLeadTwo_gte: Int
-  teamParent: Int
+  team_parent: Int
   teamParent_not: Int
   teamParent_in: [Int!]
   teamParent_not_in: [Int!]
@@ -3884,7 +3884,7 @@ input SalesTeamWhereInput {
   teamParent_lte: Int
   teamParent_gt: Int
   teamParent_gte: Int
-  testSalesTeam: Boolean
+  test_sales_team: Boolean
   testSalesTeam_not: Boolean
   type: String
   type_not: String
@@ -3936,18 +3936,18 @@ type Subscription {
 type User {
   id: Int!
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
   company: Company
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
   leads(
     where: LeadWhereInput
     orderBy: LeadOrderByInput
@@ -3957,11 +3957,11 @@ type User {
     first: Int
     last: Int
   ): [Lead!]
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
   role: Role
   salesTeams(
     where: SalesTeamWhereInput
@@ -3972,13 +3972,13 @@ type User {
     first: Int
     last: Int
   ): [SalesTeam!]
-  securityPin: Int
-  stateAbbr: String
+  security_pin: Int
+  state_abbr: String
   suffix: String
   team: SalesTeam
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
@@ -3991,33 +3991,33 @@ type UserConnection {
 input UserCreateInput {
   id: Int
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
   company: CompanyCreateOneWithoutUsersInput
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
   leads: LeadCreateManyWithoutLeadCreatorInput
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
   role: RoleCreateOneWithoutUsersInput
   salesTeams: SalesTeamCreateManyWithoutTeamLeadOneInput
-  securityPin: Int
-  stateAbbr: String
+  security_pin: Int
+  state_abbr: String
   suffix: String
   team: SalesTeamCreateOneWithoutUsersInput
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
@@ -4054,160 +4054,160 @@ input UserCreateOneWithoutSalesTeamsInput {
 input UserCreateWithoutCompanyInput {
   id: Int
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
   leads: LeadCreateManyWithoutLeadCreatorInput
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
   role: RoleCreateOneWithoutUsersInput
   salesTeams: SalesTeamCreateManyWithoutTeamLeadOneInput
-  securityPin: Int
-  stateAbbr: String
+  security_pin: Int
+  state_abbr: String
   suffix: String
   team: SalesTeamCreateOneWithoutUsersInput
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
 input UserCreateWithoutLeadsInput {
   id: Int
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
   company: CompanyCreateOneWithoutUsersInput
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
   role: RoleCreateOneWithoutUsersInput
   salesTeams: SalesTeamCreateManyWithoutTeamLeadOneInput
-  securityPin: Int
-  stateAbbr: String
+  security_pin: Int
+  state_abbr: String
   suffix: String
   team: SalesTeamCreateOneWithoutUsersInput
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
 input UserCreateWithoutRoleInput {
   id: Int
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
   company: CompanyCreateOneWithoutUsersInput
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
   leads: LeadCreateManyWithoutLeadCreatorInput
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
   salesTeams: SalesTeamCreateManyWithoutTeamLeadOneInput
-  securityPin: Int
-  stateAbbr: String
+  security_pin: Int
+  state_abbr: String
   suffix: String
   team: SalesTeamCreateOneWithoutUsersInput
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
 input UserCreateWithoutSalesTeamsInput {
   id: Int
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
   company: CompanyCreateOneWithoutUsersInput
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
   leads: LeadCreateManyWithoutLeadCreatorInput
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
   role: RoleCreateOneWithoutUsersInput
-  securityPin: Int
-  stateAbbr: String
+  security_pin: Int
+  state_abbr: String
   suffix: String
   team: SalesTeamCreateOneWithoutUsersInput
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
 input UserCreateWithoutTeamInput {
   id: Int
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
   company: CompanyCreateOneWithoutUsersInput
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
   leads: LeadCreateManyWithoutLeadCreatorInput
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
   role: RoleCreateOneWithoutUsersInput
   salesTeams: SalesTeamCreateManyWithoutTeamLeadOneInput
-  securityPin: Int
-  stateAbbr: String
+  security_pin: Int
+  state_abbr: String
   suffix: String
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
@@ -4272,28 +4272,28 @@ enum UserOrderByInput {
 type UserPreviousValues {
   id: Int!
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
-  securityPin: Int
-  stateAbbr: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
+  security_pin: Int
+  state_abbr: String
   suffix: String
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
@@ -4320,7 +4320,7 @@ input UserScalarWhereInput {
   access_not_starts_with: String
   access_ends_with: String
   access_not_ends_with: String
-  addressOne: String
+  address_one: String
   addressOne_not: String
   addressOne_in: [String!]
   addressOne_not_in: [String!]
@@ -4334,7 +4334,7 @@ input UserScalarWhereInput {
   addressOne_not_starts_with: String
   addressOne_ends_with: String
   addressOne_not_ends_with: String
-  addressTwo: String
+  address_two: String
   addressTwo_not: String
   addressTwo_in: [String!]
   addressTwo_not_in: [String!]
@@ -4348,7 +4348,7 @@ input UserScalarWhereInput {
   addressTwo_not_starts_with: String
   addressTwo_ends_with: String
   addressTwo_not_ends_with: String
-  areaId: Int
+  area_id: Int
   areaId_not: Int
   areaId_in: [Int!]
   areaId_not_in: [Int!]
@@ -4370,7 +4370,7 @@ input UserScalarWhereInput {
   city_not_starts_with: String
   city_ends_with: String
   city_not_ends_with: String
-  createdBy: Int
+  created_by: Int
   createdBy_not: Int
   createdBy_in: [Int!]
   createdBy_not_in: [Int!]
@@ -4378,7 +4378,7 @@ input UserScalarWhereInput {
   createdBy_lte: Int
   createdBy_gt: Int
   createdBy_gte: Int
-  emailNerd: String
+  email_nerd: String
   emailNerd_not: String
   emailNerd_in: [String!]
   emailNerd_not_in: [String!]
@@ -4392,7 +4392,7 @@ input UserScalarWhereInput {
   emailNerd_not_starts_with: String
   emailNerd_ends_with: String
   emailNerd_not_ends_with: String
-  emailPersonal: String
+  email_personal: String
   emailPersonal_not: String
   emailPersonal_in: [String!]
   emailPersonal_not_in: [String!]
@@ -4406,9 +4406,9 @@ input UserScalarWhereInput {
   emailPersonal_not_starts_with: String
   emailPersonal_ends_with: String
   emailPersonal_not_ends_with: String
-  employmentStatus: Boolean
+  employment_status: Boolean
   employmentStatus_not: Boolean
-  entityType: String
+  entity_type: String
   entityType_not: String
   entityType_in: [String!]
   entityType_not_in: [String!]
@@ -4422,7 +4422,7 @@ input UserScalarWhereInput {
   entityType_not_starts_with: String
   entityType_ends_with: String
   entityType_not_ends_with: String
-  firstName: String
+  first_name: String
   firstName_not: String
   firstName_in: [String!]
   firstName_not_in: [String!]
@@ -4436,7 +4436,7 @@ input UserScalarWhereInput {
   firstName_not_starts_with: String
   firstName_ends_with: String
   firstName_not_ends_with: String
-  lastName: String
+  last_name: String
   lastName_not: String
   lastName_in: [String!]
   lastName_not_in: [String!]
@@ -4450,7 +4450,7 @@ input UserScalarWhereInput {
   lastName_not_starts_with: String
   lastName_ends_with: String
   lastName_not_ends_with: String
-  payrollId: Int
+  payroll_id: Int
   payrollId_not: Int
   payrollId_in: [Int!]
   payrollId_not_in: [Int!]
@@ -4458,7 +4458,7 @@ input UserScalarWhereInput {
   payrollId_lte: Int
   payrollId_gt: Int
   payrollId_gte: Int
-  phoneCell: String
+  phone_cell: String
   phoneCell_not: String
   phoneCell_in: [String!]
   phoneCell_not_in: [String!]
@@ -4472,7 +4472,7 @@ input UserScalarWhereInput {
   phoneCell_not_starts_with: String
   phoneCell_ends_with: String
   phoneCell_not_ends_with: String
-  phoneCellCarrier: String
+  phone_cell_carrier: String
   phoneCellCarrier_not: String
   phoneCellCarrier_in: [String!]
   phoneCellCarrier_not_in: [String!]
@@ -4486,7 +4486,7 @@ input UserScalarWhereInput {
   phoneCellCarrier_not_starts_with: String
   phoneCellCarrier_ends_with: String
   phoneCellCarrier_not_ends_with: String
-  phoneHome: String
+  phone_home: String
   phoneHome_not: String
   phoneHome_in: [String!]
   phoneHome_not_in: [String!]
@@ -4500,7 +4500,7 @@ input UserScalarWhereInput {
   phoneHome_not_starts_with: String
   phoneHome_ends_with: String
   phoneHome_not_ends_with: String
-  referredBy: Int
+  referred_by: Int
   referredBy_not: Int
   referredBy_in: [Int!]
   referredBy_not_in: [Int!]
@@ -4508,7 +4508,7 @@ input UserScalarWhereInput {
   referredBy_lte: Int
   referredBy_gt: Int
   referredBy_gte: Int
-  securityPin: Int
+  security_pin: Int
   securityPin_not: Int
   securityPin_in: [Int!]
   securityPin_not_in: [Int!]
@@ -4516,7 +4516,7 @@ input UserScalarWhereInput {
   securityPin_lte: Int
   securityPin_gt: Int
   securityPin_gte: Int
-  stateAbbr: String
+  state_abbr: String
   stateAbbr_not: String
   stateAbbr_in: [String!]
   stateAbbr_not_in: [String!]
@@ -4544,7 +4544,7 @@ input UserScalarWhereInput {
   suffix_not_starts_with: String
   suffix_ends_with: String
   suffix_not_ends_with: String
-  teamPositionId: Int
+  team_position_id: Int
   teamPositionId_not: Int
   teamPositionId_in: [Int!]
   teamPositionId_not_in: [Int!]
@@ -4552,9 +4552,9 @@ input UserScalarWhereInput {
   teamPositionId_lte: Int
   teamPositionId_gt: Int
   teamPositionId_gte: Int
-  testUser: Boolean
+  test_user: Boolean
   testUser_not: Boolean
-  thirdPartyIds: String
+  third_party_ids: String
   thirdPartyIds_not: String
   thirdPartyIds_in: [String!]
   thirdPartyIds_not_in: [String!]
@@ -4607,119 +4607,119 @@ input UserSubscriptionWhereInput {
 
 input UserUpdateDataInput {
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
   company: CompanyUpdateOneWithoutUsersInput
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
   leads: LeadUpdateManyWithoutLeadCreatorInput
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
   role: RoleUpdateOneWithoutUsersInput
   salesTeams: SalesTeamUpdateManyWithoutTeamLeadOneInput
-  securityPin: Int
-  stateAbbr: String
+  security_pin: Int
+  state_abbr: String
   suffix: String
   team: SalesTeamUpdateOneWithoutUsersInput
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
 input UserUpdateInput {
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
   company: CompanyUpdateOneWithoutUsersInput
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
   leads: LeadUpdateManyWithoutLeadCreatorInput
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
   role: RoleUpdateOneWithoutUsersInput
   salesTeams: SalesTeamUpdateManyWithoutTeamLeadOneInput
-  securityPin: Int
-  stateAbbr: String
+  security_pin: Int
+  state_abbr: String
   suffix: String
   team: SalesTeamUpdateOneWithoutUsersInput
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
 input UserUpdateManyDataInput {
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
-  securityPin: Int
-  stateAbbr: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
+  security_pin: Int
+  state_abbr: String
   suffix: String
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
 input UserUpdateManyMutationInput {
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
-  securityPin: Int
-  stateAbbr: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
+  security_pin: Int
+  state_abbr: String
   suffix: String
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
@@ -4793,156 +4793,156 @@ input UserUpdateOneWithoutSalesTeamsInput {
 
 input UserUpdateWithoutCompanyDataInput {
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
   leads: LeadUpdateManyWithoutLeadCreatorInput
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
   role: RoleUpdateOneWithoutUsersInput
   salesTeams: SalesTeamUpdateManyWithoutTeamLeadOneInput
-  securityPin: Int
-  stateAbbr: String
+  security_pin: Int
+  state_abbr: String
   suffix: String
   team: SalesTeamUpdateOneWithoutUsersInput
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
 input UserUpdateWithoutLeadsDataInput {
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
   company: CompanyUpdateOneWithoutUsersInput
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
   role: RoleUpdateOneWithoutUsersInput
   salesTeams: SalesTeamUpdateManyWithoutTeamLeadOneInput
-  securityPin: Int
-  stateAbbr: String
+  security_pin: Int
+  state_abbr: String
   suffix: String
   team: SalesTeamUpdateOneWithoutUsersInput
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
 input UserUpdateWithoutRoleDataInput {
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
   company: CompanyUpdateOneWithoutUsersInput
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
   leads: LeadUpdateManyWithoutLeadCreatorInput
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
   salesTeams: SalesTeamUpdateManyWithoutTeamLeadOneInput
-  securityPin: Int
-  stateAbbr: String
+  security_pin: Int
+  state_abbr: String
   suffix: String
   team: SalesTeamUpdateOneWithoutUsersInput
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
 input UserUpdateWithoutSalesTeamsDataInput {
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
   company: CompanyUpdateOneWithoutUsersInput
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
   leads: LeadUpdateManyWithoutLeadCreatorInput
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
   role: RoleUpdateOneWithoutUsersInput
-  securityPin: Int
-  stateAbbr: String
+  security_pin: Int
+  state_abbr: String
   suffix: String
   team: SalesTeamUpdateOneWithoutUsersInput
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
 input UserUpdateWithoutTeamDataInput {
   access: String
-  addressOne: String
-  addressTwo: String
-  areaId: Int
+  address_one: String
+  address_two: String
+  area_id: Int
   city: String
   company: CompanyUpdateOneWithoutUsersInput
-  createdBy: Int
-  emailNerd: String
-  emailPersonal: String
-  employmentStatus: Boolean
-  entityType: String
-  firstName: String
-  lastName: String
+  created_by: Int
+  email_nerd: String
+  email_personal: String
+  employment_status: Boolean
+  entity_type: String
+  first_name: String
+  last_name: String
   leads: LeadUpdateManyWithoutLeadCreatorInput
-  payrollId: Int
-  phoneCell: String
-  phoneCellCarrier: String
-  phoneHome: String
-  referredBy: Int
+  payroll_id: Int
+  phone_cell: String
+  phone_cell_carrier: String
+  phone_home: String
+  referred_by: Int
   role: RoleUpdateOneWithoutUsersInput
   salesTeams: SalesTeamUpdateManyWithoutTeamLeadOneInput
-  securityPin: Int
-  stateAbbr: String
+  security_pin: Int
+  state_abbr: String
   suffix: String
-  teamPositionId: Int
-  testUser: Boolean
-  thirdPartyIds: String
+  team_position_id: Int
+  test_user: Boolean
+  third_party_ids: String
   zip: String
 }
 
@@ -5017,7 +5017,7 @@ input UserWhereInput {
   access_not_starts_with: String
   access_ends_with: String
   access_not_ends_with: String
-  addressOne: String
+  address_one: String
   addressOne_not: String
   addressOne_in: [String!]
   addressOne_not_in: [String!]
@@ -5031,7 +5031,7 @@ input UserWhereInput {
   addressOne_not_starts_with: String
   addressOne_ends_with: String
   addressOne_not_ends_with: String
-  addressTwo: String
+  address_two: String
   addressTwo_not: String
   addressTwo_in: [String!]
   addressTwo_not_in: [String!]
@@ -5045,7 +5045,7 @@ input UserWhereInput {
   addressTwo_not_starts_with: String
   addressTwo_ends_with: String
   addressTwo_not_ends_with: String
-  areaId: Int
+  area_id: Int
   areaId_not: Int
   areaId_in: [Int!]
   areaId_not_in: [Int!]
@@ -5068,7 +5068,7 @@ input UserWhereInput {
   city_ends_with: String
   city_not_ends_with: String
   company: CompanyWhereInput
-  createdBy: Int
+  created_by: Int
   createdBy_not: Int
   createdBy_in: [Int!]
   createdBy_not_in: [Int!]
@@ -5076,7 +5076,7 @@ input UserWhereInput {
   createdBy_lte: Int
   createdBy_gt: Int
   createdBy_gte: Int
-  emailNerd: String
+  email_nerd: String
   emailNerd_not: String
   emailNerd_in: [String!]
   emailNerd_not_in: [String!]
@@ -5090,7 +5090,7 @@ input UserWhereInput {
   emailNerd_not_starts_with: String
   emailNerd_ends_with: String
   emailNerd_not_ends_with: String
-  emailPersonal: String
+  email_personal: String
   emailPersonal_not: String
   emailPersonal_in: [String!]
   emailPersonal_not_in: [String!]
@@ -5104,9 +5104,9 @@ input UserWhereInput {
   emailPersonal_not_starts_with: String
   emailPersonal_ends_with: String
   emailPersonal_not_ends_with: String
-  employmentStatus: Boolean
+  employment_status: Boolean
   employmentStatus_not: Boolean
-  entityType: String
+  entity_type: String
   entityType_not: String
   entityType_in: [String!]
   entityType_not_in: [String!]
@@ -5120,7 +5120,7 @@ input UserWhereInput {
   entityType_not_starts_with: String
   entityType_ends_with: String
   entityType_not_ends_with: String
-  firstName: String
+  first_name: String
   firstName_not: String
   firstName_in: [String!]
   firstName_not_in: [String!]
@@ -5134,7 +5134,7 @@ input UserWhereInput {
   firstName_not_starts_with: String
   firstName_ends_with: String
   firstName_not_ends_with: String
-  lastName: String
+  last_name: String
   lastName_not: String
   lastName_in: [String!]
   lastName_not_in: [String!]
@@ -5151,7 +5151,7 @@ input UserWhereInput {
   leads_every: LeadWhereInput
   leads_some: LeadWhereInput
   leads_none: LeadWhereInput
-  payrollId: Int
+  payroll_id: Int
   payrollId_not: Int
   payrollId_in: [Int!]
   payrollId_not_in: [Int!]
@@ -5159,7 +5159,7 @@ input UserWhereInput {
   payrollId_lte: Int
   payrollId_gt: Int
   payrollId_gte: Int
-  phoneCell: String
+  phone_cell: String
   phoneCell_not: String
   phoneCell_in: [String!]
   phoneCell_not_in: [String!]
@@ -5173,7 +5173,7 @@ input UserWhereInput {
   phoneCell_not_starts_with: String
   phoneCell_ends_with: String
   phoneCell_not_ends_with: String
-  phoneCellCarrier: String
+  phone_cell_carrier: String
   phoneCellCarrier_not: String
   phoneCellCarrier_in: [String!]
   phoneCellCarrier_not_in: [String!]
@@ -5187,7 +5187,7 @@ input UserWhereInput {
   phoneCellCarrier_not_starts_with: String
   phoneCellCarrier_ends_with: String
   phoneCellCarrier_not_ends_with: String
-  phoneHome: String
+  phone_home: String
   phoneHome_not: String
   phoneHome_in: [String!]
   phoneHome_not_in: [String!]
@@ -5201,7 +5201,7 @@ input UserWhereInput {
   phoneHome_not_starts_with: String
   phoneHome_ends_with: String
   phoneHome_not_ends_with: String
-  referredBy: Int
+  referred_by: Int
   referredBy_not: Int
   referredBy_in: [Int!]
   referredBy_not_in: [Int!]
@@ -5213,7 +5213,7 @@ input UserWhereInput {
   salesTeams_every: SalesTeamWhereInput
   salesTeams_some: SalesTeamWhereInput
   salesTeams_none: SalesTeamWhereInput
-  securityPin: Int
+  security_pin: Int
   securityPin_not: Int
   securityPin_in: [Int!]
   securityPin_not_in: [Int!]
@@ -5221,7 +5221,7 @@ input UserWhereInput {
   securityPin_lte: Int
   securityPin_gt: Int
   securityPin_gte: Int
-  stateAbbr: String
+  state_abbr: String
   stateAbbr_not: String
   stateAbbr_in: [String!]
   stateAbbr_not_in: [String!]
@@ -5250,7 +5250,7 @@ input UserWhereInput {
   suffix_ends_with: String
   suffix_not_ends_with: String
   team: SalesTeamWhereInput
-  teamPositionId: Int
+  team_position_id: Int
   teamPositionId_not: Int
   teamPositionId_in: [Int!]
   teamPositionId_not_in: [Int!]
@@ -5258,9 +5258,9 @@ input UserWhereInput {
   teamPositionId_lte: Int
   teamPositionId_gt: Int
   teamPositionId_gte: Int
-  testUser: Boolean
+  test_user: Boolean
   testUser_not: Boolean
-  thirdPartyIds: String
+  third_party_ids: String
   thirdPartyIds_not: String
   thirdPartyIds_in: [String!]
   thirdPartyIds_not_in: [String!]
